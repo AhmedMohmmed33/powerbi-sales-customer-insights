@@ -1,6 +1,6 @@
 # Power BI Sales & Customer Insights Dashboard 📊
 
-🚀 A complete business intelligence project using SQL and Power BI to explore, clean, and visualize sales and customer data. This project offers key business insights, monthly trends, and strategic recommendations based on historical data.
+🚀 A complete Business Intelligence project using SQL and Power BI to explore, clean, and visualize sales and customer data. This project delivers key business insights, monthly performance trends, and strategic recommendations based on historical data.
 
 ---
 
@@ -27,10 +27,10 @@ This project demonstrates the end-to-end journey of turning raw sales and custom
 
 ## 🔍 Data Cleaning & Preprocessing
 
-- Initial data contained duplicate IDs in dimension tables (Products, Locations)
-- Deleting them would have resulted in data loss as the duplicates represented distinct records
-- ✅ Solution: Created new unique identifiers via SQL and built cleaned **views** for modeling
-- Ensured proper relationships for Power BI import
+- The original data contained duplicate IDs in dimension tables (e.g., Products, Locations)
+- Simply deleting them would have led to data loss as some duplicates represented valid distinct records
+- ✅ Solution: Used SQL to create new unique identifiers and built cleaned **views** to serve as modeling layers
+- Ensured data integrity and established proper relationships for Power BI import
 
 ---
 
@@ -41,8 +41,6 @@ This project demonstrates the end-to-end journey of turning raw sales and custom
 ---
 
 ## 📈 Dashboards Created
-
-> 🔗 **[Interact with the live Power BI Dashboard here](https://app.powerbi.com/links/18XtqvyVQ6?ctid=1158e2d5-dc24-41ad-abce-62841076dbde&pbi_source=linkShare&bookmarkGuid=8addbc99-2455-4bbe-b977-90cde491af5f)**
 
 ### 1. **Sales Dashboard**
 
@@ -86,6 +84,34 @@ This project demonstrates the end-to-end journey of turning raw sales and custom
 - 🌍 Target new market segments or geographies
 - 📊 Use seasonal trends to optimize Q1 next year
 
+---
+
+## 📂 Repository Structure
+
+```
+powerbi-sales-customer-insights/
+├── 📁 assets/                        # Visuals for README or dashboards (e.g. PNGs, JPG)
+│
+├── 📁 dashboard/                    # Power BI .pbix files
+│   └── Sales_Customer_Insights.pbix
+│
+├── 📁 datasets/                     # Original datasets
+│
+├── 📁 scripts/                      # SQL Scripts for loading and processing
+│   ├── 📁 EDA/                      # Exploratory queries (dimensions, ranking, performance, etc.)
+│   │   └── exploratory_queries.sql
+│   │
+│   ├── ddl_views.sql/              # Views definitions for cleaned tables and KPIs
+│   └── init_database.sql/          # Schema creation and basic setup
+│
+├── 📁 tests/                        # Data validation checks
+│   ├── integrity_check.sql         # Foreign key checks, uniqueness, referential integrity
+│   ├── quality_checks_tables.sql   # Nulls, duplicates, data type validation
+│   └── quality_checks_views.sql    # View-level data quality checks (e.g., mismatches, blanks)
+│
+├── LICENSE
+└── README.md
+```
 ---
 
 ## ✍️ Author
